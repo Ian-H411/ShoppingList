@@ -38,8 +38,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALB-aw-yYa">
-                                            <rect key="frame" x="30" y="19.5" width="269" height="50"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANq-oz-PMj">
+                                            <rect key="frame" x="339" y="24.5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="b3Z-W2-12u"/>
+                                                <constraint firstAttribute="width" constant="40" id="dwk-b4-3dl"/>
+                                            </constraints>
+                                            <state key="normal" image="inComplete"/>
+                                            <connections>
+                                                <action selector="purchasedButtonTapped:" destination="L0j-Y5-rSH" eventType="touchUpInside" id="tqv-v2-y8m"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALB-aw-yYa">
+                                            <rect key="frame" x="32" y="19" width="269" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="BKW-D2-uPw"/>
                                             </constraints>
@@ -47,17 +58,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANq-oz-PMj">
-                                            <rect key="frame" x="309" y="9.5" width="70" height="70"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="70" id="b3Z-W2-12u"/>
-                                                <constraint firstAttribute="width" constant="70" id="dwk-b4-3dl"/>
-                                            </constraints>
-                                            <state key="normal" image="inComplete"/>
-                                            <connections>
-                                                <action selector="purchasedButtonTapped:" destination="L0j-Y5-rSH" eventType="touchUpInside" id="tqv-v2-y8m"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ALB-aw-yYa" firstAttribute="leading" secondItem="jop-FV-RDI" secondAttribute="leadingMargin" constant="10" id="brk-2q-LdJ"/>

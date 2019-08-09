@@ -26,11 +26,15 @@ class ItemListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return ItemController.sharedInstance.shoppintList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,36 +42,51 @@ class ItemListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? ItemTableViewCell else {return UITableViewCell()}
         
         //get the item
-        let item = ItemController.sharedInstance.fetchedResultsController.object(at: indexPath)
+        let item = ItemController.sharedInstance.shoppintList[indexPath.row]
         
         // update cell
         cell.update(item: item)
         
         //cant forget to set the delegate
         cell.delegate = self
+    
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
-            //just need to use the fancy delete method  this will clear out the cell as well as the object
-            let item = ItemController.sharedInstance.fetchedResultsController.object(at: indexPath)
+            let item = ItemController.sharedInstance.shoppintList[indexPath.row]
             ItemController.sharedInstance.delete(item: item)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     //MARK: actions
     
     @IBAction func addButtonTapped(_ sender: Any) {
         addItemUsingNotifications()
+
+       
     }
-    
-    //Mark: helpers
+    func update(){
+        
+    }
+    //MARK: helpers
     func addItemUsingNotifications(){
-    let alert = UIAlertController(title: "New Item", message: <#T##String?#>, preferredStyle: <#T##UIAlertController.Style#>)
+    let alert = UIAlertController(title: "New Item", message: "what do you want to add to your list", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+        }
+        alert.addAction(UIAlertAction(title: "add", style: .default, handler: { (action) in
+            guard let newItem = alert.textFields?[0].text else {return}
+            print(newItem)
+           ItemController.sharedInstance.saveItem(name: newItem)
+            self.reloadInputViews()
+
+        }))
+        alert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        self.present(alert, animated: true, completion: nil)
+        tableView.reloadData()
     }
-    
 }
 //MARK: Extensions
 
@@ -78,11 +97,14 @@ extension ItemListTableViewController: ItemTableViewCellDelegate{
         guard let index = tableView.indexPath(for: sender) else {return}
         
         //grab the item
-        let item = ItemController.sharedInstance.fetchedResultsController.object(at: index)
+        let item = ItemController.sharedInstance.shoppintList[index.row]
         
+
+
         //change the value and then resend to the cell to change the pic
         ItemController.sharedInstance.toggle(item: item)
         sender.updateButton(isPurchased: item.purchased)
+        tableView.reloadRows(at: [index], with: .automatic)
     }
     
     

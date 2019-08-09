@@ -49,5 +49,6 @@ extension ItemTableViewCell {
     func update(item: Item){
         ItemNameTextField.text = item.name
         updateButton(isPurchased: item.purchased)
+        
 }
 }
