@@ -16,6 +16,7 @@
 		25AB9CC722FDC8A8000CEFB9 /* Item+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CC622FDC8A8000CEFB9 /* Item+Convenience.swift */; };
 		25AB9CC922FDC9FE000CEFB9 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CC822FDC9FE000CEFB9 /* ItemController.swift */; };
 		25AB9CCB22FDCF7B000CEFB9 /* ItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CCA22FDCF7B000CEFB9 /* ItemListTableViewController.swift */; };
+		25AB9CCD22FDD287000CEFB9 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CCC22FDD287000CEFB9 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		25AB9CC622FDC8A8000CEFB9 /* Item+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Convenience.swift"; sourceTree = "<group>"; };
 		25AB9CC822FDC9FE000CEFB9 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		25AB9CCA22FDCF7B000CEFB9 /* ItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewController.swift; sourceTree = "<group>"; };
+		25AB9CCC22FDD287000CEFB9 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				25AB9CCA22FDCF7B000CEFB9 /* ItemListTableViewController.swift */,
+				25AB9CCC22FDD287000CEFB9 /* ItemTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				25AB9CCB22FDCF7B000CEFB9 /* ItemListTableViewController.swift in Sources */,
 				25AB9CB422FDC7CA000CEFB9 /* ShoppingList.xcdatamodeld in Sources */,
 				25AB9CC922FDC9FE000CEFB9 /* ItemController.swift in Sources */,
+				25AB9CCD22FDD287000CEFB9 /* ItemTableViewCell.swift in Sources */,
 				25AB9CAC22FDC7CA000CEFB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

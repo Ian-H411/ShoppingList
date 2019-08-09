@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 class ItemController {
     //singleton
-    var sharedInstance = ItemController()
+    static let sharedInstance = ItemController()
     
     //source of truth the origin of all
     var fetchedResultsController: NSFetchedResultsController<Item>
