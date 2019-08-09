@@ -14,6 +14,8 @@
 		25AB9CB922FDC7CB000CEFB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AB9CB722FDC7CB000CEFB9 /* LaunchScreen.storyboard */; };
 		25AB9CC522FDC87E000CEFB9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CC422FDC87E000CEFB9 /* CoreDataStack.swift */; };
 		25AB9CC722FDC8A8000CEFB9 /* Item+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CC622FDC8A8000CEFB9 /* Item+Convenience.swift */; };
+		25AB9CC922FDC9FE000CEFB9 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CC822FDC9FE000CEFB9 /* ItemController.swift */; };
+		25AB9CCB22FDCF7B000CEFB9 /* ItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB9CCA22FDCF7B000CEFB9 /* ItemListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		25AB9CBA22FDC7CB000CEFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25AB9CC422FDC87E000CEFB9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		25AB9CC622FDC8A8000CEFB9 /* Item+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Convenience.swift"; sourceTree = "<group>"; };
+		25AB9CC822FDC9FE000CEFB9 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		25AB9CCA22FDCF7B000CEFB9 /* ItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				25AB9CC322FDC822000CEFB9 /* models */,
-				25AB9CC222FDC81E000CEFB9 /* Views */,
 				25AB9CC122FDC81C000CEFB9 /* Controllers */,
+				25AB9CC222FDC81E000CEFB9 /* Views */,
 				25AB9CC022FDC819000CEFB9 /* resources */,
 				25AB9CAF22FDC7CA000CEFB9 /* Main.storyboard */,
 				25AB9CB222FDC7CA000CEFB9 /* ShoppingList.xcdatamodeld */,
 				25AB9CC422FDC87E000CEFB9 /* CoreDataStack.swift */,
-				25AB9CC622FDC8A8000CEFB9 /* Item+Convenience.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -84,6 +87,7 @@
 		25AB9CC122FDC81C000CEFB9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				25AB9CC822FDC9FE000CEFB9 /* ItemController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +95,7 @@
 		25AB9CC222FDC81E000CEFB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				25AB9CCA22FDCF7B000CEFB9 /* ItemListTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 		25AB9CC322FDC822000CEFB9 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				25AB9CC622FDC8A8000CEFB9 /* Item+Convenience.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 			files = (
 				25AB9CC722FDC8A8000CEFB9 /* Item+Convenience.swift in Sources */,
 				25AB9CC522FDC87E000CEFB9 /* CoreDataStack.swift in Sources */,
+				25AB9CCB22FDCF7B000CEFB9 /* ItemListTableViewController.swift in Sources */,
 				25AB9CB422FDC7CA000CEFB9 /* ShoppingList.xcdatamodeld in Sources */,
+				25AB9CC922FDC9FE000CEFB9 /* ItemController.swift in Sources */,
 				25AB9CAC22FDC7CA000CEFB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
